@@ -7,19 +7,19 @@
 
 :root {
   /* ── Core Colors ── */
-  --bg:        #0a1628;       /* deep navy — main background         */
-  --bg2:       #0f1f3a;       /* slightly lighter — section bg       */
+  --bg:        #ddeef8;       /* deep navy — main background         */
+  --bg2:       #ddeef8;       /* slightly lighter — section bg       */
   --card:      #132240;       /* card / panel background             */
   --border:    #1e3a5f;       /* borders and dividers                */
   --border2:   #2a5080;       /* hover borders                       */
 
   /* ── Accent ── */
   --accent:    #1a6b9a;       /* primary steel blue                  */
-  --accent2:   #4db8d4;       /* highlight / hover state             */
+  --accent2:   #1a6b9a;       /* highlight / hover state             */
   --accent-bg: rgba(26,107,154,0.12); /* subtle tinted background    */
 
   /* ── Text ── */
-  --ink:       #e8f4f8;       /* primary text — blue-tinted white    */
+  --ink:       #082f4a;       /* primary text — blue-tinted white    */
   --muted:     #7aabbf;       /* secondary / muted text              */
   --heading:   #ffffff;       /* headings                            */
 
