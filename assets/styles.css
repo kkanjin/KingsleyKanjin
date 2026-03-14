@@ -2,10 +2,10 @@
 
 :root {
   /* ── Core Colors ── */
-  --bg:        #d0eaf8;       /* light sky blue — main background        */
-  --bg2:       #b8ddf2;       /* slightly deeper — section bg            */
-  --card:      #e8f4fb;       /* card background — light blue tint       */
-  --border:    #aed4ea;       /* borders and dividers                    */
+  --bg:        #ffffff;       /* pure white background                   */
+  --bg2:       #f4f8fc;       /* off-white section bg                    */
+  --card:      #d0eaf8;       /* sky blue cards                          */
+  --border:    #aed4ea;       /* borders                                 */
   --border2:   #1a6b9a;       /* hover borders                           */
 
   /* ── Accent ── */
@@ -16,12 +16,12 @@
   /* ── Text ── */
   --ink:       #082f4a;       /* primary text — deep navy                */
   --muted:     #0d4f75;       /* secondary text — dark ocean blue        */
-  --heading:   #082f4a;       /* headings — deepest navy                 */
+  --heading:   #082f4a;       /* headings                                */
 
   /* ── Shadows ── */
-  --shadow-sm: 0 2px 8px  rgba(0,0,0,0.10);
-  --shadow-md: 0 8px 24px rgba(0,0,0,0.12);
-  --shadow-lg: 0 16px 40px rgba(0,0,0,0.15);
+  --shadow-sm: 0 2px 8px  rgba(0,0,0,0.08);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.10);
+  --shadow-lg: 0 16px 40px rgba(0,0,0,0.13);
 }
 
 /* ── Reset & Base ─────────────────────────────────────────────── */
@@ -52,13 +52,13 @@ h1, h2, h3, h4 {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(208, 234, 248, 0.92);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
 .nav {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -79,7 +79,6 @@ h1, h2, h3, h4 {
   color: var(--muted);
   font-size: 0.9em;
   font-weight: 600;
-  letter-spacing: 0.2px;
   transition: all 0.2s ease;
 }
 .nav a:hover {
@@ -94,7 +93,7 @@ h1, h2, h3, h4 {
 
 /* ── Layout ──────────────────────────────────────────────────── */
 .container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 32px 20px;
 }
@@ -144,12 +143,11 @@ h1, h2, h3, h4 {
   font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 0.9em;
-  letter-spacing: 0.3px;
   background: var(--accent);
   color: #ffffff;
-  border: 1px solid var(--accent);
+  border: 2px solid var(--accent);
   transition: all 0.25s ease;
-  box-shadow: 0 2px 12px rgba(26,107,154,0.25);
+  box-shadow: 0 2px 12px rgba(26,107,154,0.2);
   cursor: pointer;
 }
 .btn:hover {
@@ -157,7 +155,7 @@ h1, h2, h3, h4 {
   border-color: var(--accent2);
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(13,79,117,0.3);
+  box-shadow: 0 6px 20px rgba(13,79,117,0.25);
 }
 .btn.secondary {
   background: transparent;
@@ -224,7 +222,7 @@ h1, h2, h3, h4 {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 22px 24px;
+  padding: 24px 28px;
   margin-bottom: 20px;
   line-height: 1.75;
   color: var(--ink);
@@ -274,22 +272,24 @@ h1, h2, h3, h4 {
   line-height: 1.6;
 }
 
-/* ── Project Panels ──────────────────────────────────────────── */
+/* ── Project Panels — wider ──────────────────────────────────── */
 #projects .lead {
   color: var(--muted);
   font-weight: 500;
   margin-bottom: 8px;
 }
 .panel {
-  margin: 24px 0;
+  margin: 28px 0;
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 18px;
   background: var(--card);
   overflow: hidden;
   box-shadow: var(--shadow-md);
   transform: translateY(14px);
   opacity: 0;
   transition: 0.8s all ease;
+  /* wider: stretch to full container width with extra horizontal padding */
+  width: 100%;
 }
 .panel.visible {
   transform: translateY(0);
@@ -301,9 +301,9 @@ h1, h2, h3, h4 {
 }
 .panel-body {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 24px;
-  padding: 24px;
+  grid-template-columns: 1.4fr 0.8fr;  /* wider text column */
+  gap: 32px;
+  padding: 32px 36px;                   /* more padding for spacious feel */
 }
 .subtitle {
   color: var(--muted);
@@ -340,11 +340,12 @@ h1, h2, h3, h4 {
 /* ── Map Preview ─────────────────────────────────────────────── */
 .panel-hero {
   width: 100%;
-  height: 420px;
+  height: 440px;
   object-fit: contain;
-  background: var(--bg2);
+  background: #b8ddf2;
   border-radius: 12px;
   border: 1px solid var(--border);
+  display: block;
 }
 
 /* ── Footer ──────────────────────────────────────────────────── */
@@ -414,14 +415,14 @@ h1, h2, h3, h4 {
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  background: rgba(208, 234, 248, 0.75);
+  background: rgba(255, 255, 255, 0.80);
   color: var(--ink);
   padding: 28px 42px;
   border-radius: 16px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-  border: 1px solid rgba(26,107,154,0.25);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  border: 1px solid rgba(26,107,154,0.2);
 }
 .hero-slideshow .overlay-text h1 {
   margin: 0 0 10px;
@@ -449,7 +450,7 @@ h1, h2, h3, h4 {
   gap: 24px;
 }
 .map-frame {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   background: var(--card);
   border: 1px solid var(--border);
@@ -480,7 +481,7 @@ arcgis-embedded-map { overflow: hidden; }
 @media (max-width: 980px) {
   .hero         { grid-template-columns: 1fr; min-height: auto; gap: 24px; }
   .grid         { grid-template-columns: 1fr 1fr; }
-  .panel-body   { grid-template-columns: 1fr; }
+  .panel-body   { grid-template-columns: 1fr; padding: 20px 24px; gap: 20px; }
   .meta         { grid-template-columns: 1fr; }
   .map-grid     { grid-template-columns: 1fr; }
   .map-frame iframe,
@@ -493,6 +494,7 @@ arcgis-embedded-map { overflow: hidden; }
   .cta          { flex-direction: column; }
   .btn          { text-align: center; }
   .section h2   { font-size: 24px; }
+  .panel-body   { padding: 16px 18px; }
   .map-frame iframe,
   arcgis-embedded-map { height: 360px; }
 }
