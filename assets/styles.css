@@ -75,12 +75,12 @@ h1, h2, h3, h4 { color: var(--ink); font-family: 'DM Serif Display', serif; }
 .hero-section {
   background: linear-gradient(160deg, #d0eaf8 0%, #b8ddf2 100%);
   border-bottom: 2px solid var(--border);
-  padding: 36px 24px 40px;
+  padding: 30px 20px 30px;
   text-align: center;
 }
 .hero-inner { max-width: 680px; margin: 0 auto; }
 .portrait {
-  width: 200px; height: 100px;
+  width: 250px; height: 250px;
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid #ffffff;
