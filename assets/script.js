@@ -27,14 +27,13 @@ function highlightNav() {
 // ── List HTML helper ──────────────────────────────────────────────
 function listHTML(title, arr, compact) {
     if (!Array.isArray(arr) || !arr.length) return '';
-    const mt = compact ? '10px' : '14px';
-    const mb = compact ? '6px'  : '8px';
+    const mt = compact ? '0' : '14px';
     const fs = compact ? '0.88em' : '0.92em';
     return `
         <div>
             <h4 style="color:var(--accent);font-family:'DM Sans',sans-serif;
                 font-size:0.82em;font-weight:700;text-transform:uppercase;
-                letter-spacing:0.5px;margin:${mt} 0 ${mb};">${title}</h4>
+                letter-spacing:0.5px;margin:0 0 6px;">${title}</h4>
             <ul style="padding-left:16px;margin:0;">
                 ${arr.map(x => `<li style="color:var(--muted);font-size:${fs};
                     line-height:1.55;margin:3px 0;">${x}</li>`).join('')}
@@ -42,7 +41,7 @@ function listHTML(title, arr, compact) {
         </div>`;
 }
 
-// ── Projects that use portrait layout (text top, map below) ───────
+// ── Portrait projects ─────────────────────────────────────────────
 const PORTRAIT_PROJECTS = [
     'Accessibility to Improved Water Point Sources — 2SFCA',
     'Accessibility to Dentist — 2SFCA'
@@ -58,13 +57,8 @@ async function loadPanels() {
         host.innerHTML = '';
 
         data.forEach(p => {
-            const el        = document.createElement('section');
+            const el         = document.createElement('section');
             const isPortrait = PORTRAIT_PROJECTS.includes(p.title.trim());
-            const compact    = isPortrait;
-
-            const methodsList     = listHTML('Methods',      p.methods,        compact);
-            const dataList        = listHTML('Data Used',    p['Data'],        compact);
-            const keyFindingsList = listHTML('Key Findings', p['Key findings'], compact);
 
             const toolPills = Array.isArray(p.tools) && p.tools.length
                 ? `<div class="pills">${p.tools.map(t =>
@@ -72,7 +66,18 @@ async function loadPanels() {
                 : '';
 
             if (isPortrait) {
-                // ── PORTRAIT: text top, map bottom ────────────────
+                // Portrait: Methods | Data Used | Key Findings all in one 3-col row
+                const hasMethods  = Array.isArray(p.methods)        && p.methods.length;
+                const hasData     = Array.isArray(p['Data'])         && p['Data'].length;
+                const hasFindings = Array.isArray(p['Key findings']) && p['Key findings'].length;
+
+                const cols = [hasMethods, hasData, hasFindings].filter(Boolean).length;
+                const gridStyle = `display:grid;grid-template-columns:repeat(${cols},1fr);gap:16px;margin-top:14px;`;
+
+                const methodsBlock  = hasMethods  ? listHTML('Methods',      p.methods,        true) : '';
+                const dataBlock     = hasData     ? listHTML('Data Used',    p['Data'],        true) : '';
+                const findingsBlock = hasFindings ? listHTML('Key Findings', p['Key findings'], true) : '';
+
                 el.className = 'panel panel-portrait';
                 el.innerHTML = `
                     <div class="panel-body-portrait">
@@ -80,8 +85,11 @@ async function loadPanels() {
                             <h3>${p.title}</h3>
                             <div class="subtitle">${p.subtitle || ''}</div>
                             <p>${p.description || ''}</p>
-                            ${methodsList}
-                            <div class="meta">${dataList}${keyFindingsList}</div>
+                            <div style="${gridStyle}">
+                                ${methodsBlock}
+                                ${dataBlock}
+                                ${findingsBlock}
+                            </div>
                             ${toolPills}
                         </div>
                         <div class="map-portrait">
@@ -90,8 +98,13 @@ async function loadPanels() {
                                  alt="${p.title}" />
                         </div>
                     </div>`;
+
             } else {
-                // ── LANDSCAPE: text left, map right ───────────────
+                // Landscape: text left, map right
+                const methodsList     = listHTML('Methods',      p.methods,        false);
+                const dataList        = listHTML('Data Used',    p['Data'],        false);
+                const keyFindingsList = listHTML('Key Findings', p['Key findings'], false);
+
                 el.className = 'panel panel-landscape';
                 el.innerHTML = `
                     <div class="panel-body-landscape">
@@ -114,7 +127,7 @@ async function loadPanels() {
             host.appendChild(el);
         });
 
-        // Animate panels in on scroll
+        // Animate on scroll
         const obs = new IntersectionObserver(entries => {
             entries.forEach(e => {
                 if (e.isIntersecting) {
