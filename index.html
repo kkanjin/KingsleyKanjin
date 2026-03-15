@@ -3,121 +3,148 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio</title>
-
-    <!-- SEO -->
+    <title>Kingsley Kanjin · Portfolio</title>
     <meta name="title"       content="Kingsley Kanjin – GIS & Water Quality Planner" />
     <meta name="description" content="Portfolio of Kingsley Kanjin – GIS Analyst and Water Quality Planner specialising in spatial data analysis, ArcGIS, and environmental planning." />
     <meta name="keywords"    content="Kingsley Kanjin, GIS Analyst, Water Quality Planner, ArcGIS, Remote Sensing, Spatial Analysis, TMACOG" />
     <meta name="robots"      content="index, follow" />
-    <link rel="canonical"    href="https://kkanjin.github.io/KingsleyKanjin/" />
-
-    <!-- Google Fonts -->
+    <link rel="canonical"    href="https://kkanjin.github.io/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
-
-    <!-- ArcGIS Embeddable Components -->
     <script type="module" src="https://js.arcgis.com/embeddable-components/4.33/arcgis-embeddable-components.esm.js"></script>
-
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
 
-<!-- ── NAVIGATION ──────────────────────────────────────────────────── -->
+<!-- ── NAVIGATION — dark navy ─────────────────────────────────── -->
 <header class="header">
     <nav class="nav">
-        <div class="brand">Porfolio</div>
-        <div>
+        <div class="brand">Kingsley Kanjin</div>
+        <div class="nav-links">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#maps">Maps</a>
+            <a href="assets/documents/Kingsley_Kanjin_Resume.pdf" target="_blank">Résumé</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 </header>
 
-    <!-- ── ABOUT ──────────────────────────────────────────────────── -->
-    <section class="hero" id="about">
-        <div>
-            <img src="assets/images/portrait.jpg"
-                 alt="Portrait of Kingsley Kanjin"
-                 class="portrait" />
-            <h1 class="name">Kingsley Kanjin</h1>
-            <div class="role">GIS Analyst · Water Quality Planner</div>
-            <p>This portfolio illustrates my experience in GIS and Water Quality Planning.
-               I am actively adding new projects on a regular basis — check back for updates.</p>
-            <div class="cta">
-                <a class="btn secondary"
-                   href="assets/documents/Kingsley_Kanjin_Resume.pdf"
-                   <a class="btn"
-                   href="https://www.linkedin.com/in/kingsley-kanjin-9bb368217/"
-                   target="_blank">LinkedIn</a>
-                <a class="btn secondary"
-                   href="https://scholar.google.com/citations?user=hM_QFV0AAAAJ&hl=en"
-                   target="_blank">Academic Publications</a>
-            </div>
+<!-- ── HERO — light blue, centered ───────────────────────────── -->
+<section class="hero-section" id="about">
+    <div class="hero-inner">
+        <img src="assets/images/portrait.jpg"
+             alt="Portrait of Kingsley Kanjin"
+             class="portrait" />
+        <h1 class="name">Kingsley Kanjin</h1>
+        <div class="role">GIS Analyst · Water Quality Planner</div>
+        <p class="hero-desc">This portfolio illustrates my experience in GIS and Water Quality Planning.
+           I am actively adding new projects on a regular basis — check back for updates.</p>
+        <div class="cta">
+            <a class="btn secondary" href="assets/documents/Kingsley_Kanjin_Resume.pdf" target="_blank">Résumé (PDF)</a>
+            <a class="btn" href="https://www.linkedin.com/in/kingsley-kanjin-9bb368217/" target="_blank">LinkedIn</a>
+            <a class="btn secondary" href="https://scholar.google.com/citations?user=hM_QFV0AAAAJ&hl=en" target="_blank">Academic Publications</a>
         </div>
-        <div class="banner">
-            <img src="assets/images/banner1.jpg" alt="NDVI/LST banner"  class="show" />
-            <img src="assets/images/banner2.jpg" alt="LiDAR banner" />
-            <img src="assets/images/banner3.jpg" alt="2SFCA banner" />
-        </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ── EXPERIENCE ─────────────────────────────────────────────── -->
+<main class="container">
+
+    <!-- ── EXPERIENCE ─────────────────────────────────────────── -->
     <section class="section" id="experience">
         <h2>Professional Experience</h2>
-        <div class="exp">
-            I am a GIS Analyst with over six years of experience in GIS and remote sensing,
-            and two years of experience in environmental planning and water quality management.
-            At the Toledo Metropolitan Area Council of Governments (TMACOG), I lead GIS-based
-            analyses that support the Areawide Water Quality Management (208) Plan, climate
-            resilience assessments, and Permit-to-Install (PTI) compliance reviews. My work
-            integrates hydrologic modelling, spatial analysis, and stakeholder engagement to
-            guide infrastructure investment and protect public health. I am also experienced
-            in public communication, regional wastewater planning, and environmental impact
-            assessments, combining spatial analytics with policy understanding to deliver
-            data-driven solutions for sustainable communities.
+        <div class="exp-card">
+            <div class="exp-header">
+                <div class="exp-org">Toledo Metropolitan Area Council of Governments (TMACOG)</div>
+                <div class="exp-meta">
+                    <span class="exp-role">GIS Analyst · Water Quality Planner</span>
+                    <span class="exp-period">2022 – Present &nbsp;·&nbsp; Toledo, OH</span>
+                </div>
+            </div>
+            <div class="exp-body">
+                <p class="exp-summary">GIS Analyst with over six years of experience in GIS and remote sensing,
+                and two years in environmental planning and water quality management. I lead GIS-based
+                analyses supporting the Areawide Water Quality Management (208) Plan, climate resilience
+                assessments, and Permit-to-Install (PTI) compliance reviews.</p>
+                <div class="exp-highlights">
+                    <div class="highlight">
+                        <span class="h-icon">🗺</span>
+                        <div>
+                            <strong>Spatial Analysis</strong>
+                            <p>Hydrologic modelling, watershed delineation and spatial data analysis
+                            to guide infrastructure investment and protect public health.</p>
+                        </div>
+                    </div>
+                    <div class="highlight">
+                        <span class="h-icon">💧</span>
+                        <div>
+                            <strong>Water Quality Planning</strong>
+                            <p>Regional wastewater planning, PTI compliance reviews and
+                            Areawide Water Quality Management (208) Plan support.</p>
+                        </div>
+                    </div>
+                    <div class="highlight">
+                        <span class="h-icon">🌍</span>
+                        <div>
+                            <strong>Climate Resilience</strong>
+                            <p>Climate resilience assessments and environmental impact assessments
+                            combining spatial analytics with policy understanding.</p>
+                        </div>
+                    </div>
+                    <div class="highlight">
+                        <span class="h-icon">🤝</span>
+                        <div>
+                            <strong>Stakeholder Engagement</strong>
+                            <p>Public communication and stakeholder engagement delivering
+                            data-driven solutions for sustainable communities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- ── SKILLS ─────────────────────────────────────────────────── -->
+    <!-- ── SKILLS ─────────────────────────────────────────────── -->
     <section class="section" id="skills">
         <h2>Skills &amp; Tools</h2>
-        <div class="grid">
-            <div class="card">
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">🗺</div>
                 <h4>GIS</h4>
                 <p>ArcGIS Pro, ArcGIS API for Python, WebGIS (ArcGIS Online)</p>
             </div>
-            <div class="card">
+            <div class="skill-card">
+                <div class="skill-icon">💻</div>
                 <h4>Programming</h4>
                 <p>Python, R, Google Earth Engine</p>
             </div>
-            <div class="card">
+            <div class="skill-card">
+                <div class="skill-icon">🌿</div>
                 <h4>Environmental Planning</h4>
-                <p>Permit-to-Install Compliance Analysis</p>
+                <p>Permit-to-Install Compliance Analysis, Environmental Impact Assessment</p>
             </div>
-            <div class="card">
+            <div class="skill-card">
+                <div class="skill-icon">💧</div>
                 <h4>Water Systems</h4>
                 <p>Wastewater &amp; Public Drinking Water Planning</p>
             </div>
-            <div class="card">
+            <div class="skill-card">
+                <div class="skill-icon">🤝</div>
                 <h4>Engagement</h4>
-                <p>Stakeholder Engagement, Public Speaking</p>
+                <p>Stakeholder Engagement, Public Speaking, Policy Communication</p>
             </div>
-            <div class="card">
+            <div class="skill-card">
+                <div class="skill-icon">📊</div>
                 <h4>Modelling</h4>
-                <p>Spatial Accessibility, Remote Sensing,
-                   Hydrologic &amp; Climate Resilience</p>
+                <p>Spatial Accessibility, Remote Sensing, Hydrologic &amp; Climate Resilience</p>
             </div>
         </div>
     </section>
 
-    <!-- ── PROJECTS ───────────────────────────────────────────────── -->
+    <!-- ── PROJECTS ───────────────────────────────────────────── -->
     <section class="section" id="projects">
         <h2>Projects</h2>
         <p class="lead">Each project presents a brief narrative supported by static maps
@@ -125,77 +152,53 @@
         <div id="story-panels"></div>
     </section>
 
-    <!-- ── INTERACTIVE MAPS & DASHBOARD ──────────────────────────── -->
+    <!-- ── MAPS ───────────────────────────────────────────────── -->
     <section class="section" id="maps">
         <h2>Interactive Maps &amp; Dashboard</h2>
-        <p class="lead" style="margin-bottom:24px;">
-            Live maps and dashboards built with ArcGIS Online and Python.
-        </p>
+        <p class="lead" style="margin-bottom:24px;">Live maps and dashboards built with ArcGIS Online and Python.</p>
 
-        <!-- ArcGIS Embedded Map -->
         <div class="map-frame" style="margin-bottom:28px;">
-            <p class="map-caption" style="padding-bottom:8px;font-weight:600;color:var(--accent2);">
-                ArcGIS Online — Interactive Map
-            </p>
+            <p class="map-caption">ArcGIS Online — Interactive Map</p>
             <arcgis-embedded-map
                 item-id="0d157147aa88452a9bfb7386c2ae702d"
                 style="height:600px;width:100%;"
                 theme="dark"
-                bookmarks-enabled
-                heading-enabled
-                legend-enabled
-                information-enabled
-                share-enabled
+                bookmarks-enabled heading-enabled legend-enabled
+                information-enabled share-enabled
                 center="-73.69036517907091,45.559527472680095"
                 scale="577790.5542885"
                 portal-url="https://gisag.maps.arcgis.com">
             </arcgis-embedded-map>
         </div>
 
-        <!-- Ohio Water Quality Dashboard -->
         <div class="map-frame">
-            <p class="map-caption" style="padding-bottom:8px;font-weight:600;color:var(--accent2);">
-               Scroll-down to explore the dashboard below
-            </p>
-            <iframe
-                src="https://kkanjin.github.io/ohio-wq-dashboard/"
-                width="100%"
-                height="1800px"
-                frameborder="0"
-                title="Ohio Water Quality Dashboard"
-                loading="lazy"
-                style="border-radius:10px;border:none;display:block;">
-            </iframe>
+            <p class="map-caption">Ohio HUC-8 Water Quality Monitoring Coverage &amp; Gap Assessment — 2024–2025</p>
+            <iframe src="https://kkanjin.github.io/ohio-wq-dashboard/"
+                    width="100%" height="1800px" frameborder="0"
+                    title="Ohio Water Quality Dashboard" loading="lazy"
+                    style="border-radius:10px;border:none;display:block;"></iframe>
         </div>
     </section>
 
-    <!-- ── CONTACT ────────────────────────────────────────────────── -->
+    <!-- ── CONTACT ────────────────────────────────────────────── -->
     <section class="section" id="contact">
         <h2>Contact</h2>
-        <div class="exp" style="max-width:560px;">
-            <p style="margin-bottom:10px;">
-                📧 <a href="mailto:kanjinkingsley3@gmail.com">kanjinkingsley3@gmail.com</a>
-            </p>
-            <p style="margin-bottom:10px;">
-                🔗 <a href="https://www.linkedin.com/in/kingsley-kanjin-9bb368217/"
-                      target="_blank">LinkedIn Profile</a>
-            </p>
-            <p style="margin-bottom:10px;">
-                📍 Toledo, OH &nbsp;|&nbsp; 📞 419-932-1884
-            </p>
+        <div class="contact-card">
+            <p>📧 <a href="mailto:kanjinkingsley3@gmail.com">kanjinkingsley3@gmail.com</a></p>
+            <p>🔗 <a href="https://www.linkedin.com/in/kingsley-kanjin-9bb368217/" target="_blank">LinkedIn Profile</a></p>
+            <p>📍 Toledo, OH &nbsp;|&nbsp; 📞 419-932-1884</p>
         </div>
     </section>
 
 </main>
 
-<!-- ── FOOTER ─────────────────────────────────────────────────────── -->
+<!-- ── FOOTER ─────────────────────────────────────────────────── -->
 <footer class="footer">
     <div class="credit">Kingsley Kanjin &nbsp;|&nbsp; GIS Analyst · Water Quality Planner</div>
     <p>
         <a href="mailto:kanjinkingsley3@gmail.com">kanjinkingsley3@gmail.com</a>
         &nbsp;·&nbsp;
-        <a href="https://www.linkedin.com/in/kingsley-kanjin-9bb368217/"
-           target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/kingsley-kanjin-9bb368217/" target="_blank">LinkedIn</a>
         &nbsp;·&nbsp; Toledo, OH
     </p>
     <p style="margin-top:10px;font-size:0.8em;">
@@ -205,10 +208,6 @@
 </footer>
 
 <script src="assets/script.js"></script>
-<script>
-    // Auto-update copyright year
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
