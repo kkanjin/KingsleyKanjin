@@ -360,12 +360,12 @@ arcgis-embedded-map { overflow: hidden; }
 /* ══ LANDSCAPE LAYOUT (map on right) ════════════════════════════ */
 .panel-body-landscape {
   display: grid;
-  grid-template-columns: 52% 48%;
+  grid-template-columns: 60% 50%;
   gap: 0;
   align-items: stretch;
 }
 .panel-body-landscape .text {
-  padding: 28px 30px;
+  padding: 30px 40px;
   border-right: 1px solid var(--border);
 }
 .panel-body-landscape .text h3 {
